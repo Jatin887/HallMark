@@ -10,4 +10,7 @@
     <color name="nayablue">#0099ff</color>
     <color name="neworange">#ffa500</color>
     <color name="brown">#40211F</color>
+    <color name="Black">#292929</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#7DC5FD</color>
 </resources>
