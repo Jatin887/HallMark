@@ -11,8 +11,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.hall"
-        vectorDrawables.useSupportLibrary = true
-        minSdkVersion 16
+
+        minSdkVersion 25
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"

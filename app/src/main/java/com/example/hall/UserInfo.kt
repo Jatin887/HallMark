@@ -7,7 +7,6 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.phone_userprofile.*
 import kotlinx.android.synthetic.main.userinfo.*
 
 
@@ -16,6 +15,7 @@ class UserInfo: AppCompatActivity() {
     lateinit var logout:Button
     lateinit var mDatabase: FirebaseDatabase
     lateinit var ref: DatabaseReference
+    lateinit var signout:Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,15 +44,16 @@ class UserInfo: AppCompatActivity() {
     private fun loadProfile(){
         val currentUser=mAuth.currentUser
         val userRefrence= ref.child(currentUser?.uid!!)
+        signout=findViewById(R.id.btn_signout)
 
 
-        btn_signoutphone.setOnClickListener{
+        signout.setOnClickListener{
             mAuth.signOut()
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
 
-        umail.text="Email: "+ currentUser.email
+        umail.text="Email: "+ currentUser?.email
         userRefrence.addValueEventListener(object :ValueEventListener{
             override fun onCancelled(error: DatabaseError) {
                 TODO("NOT YET IMPLEMENTED")

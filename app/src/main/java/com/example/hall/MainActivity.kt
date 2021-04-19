@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         googleBtn = findViewById(R.id.googleLogin)
         phoneBtn = findViewById(R.id.phoneBtn)
         mAuth = FirebaseAuth.getInstance()
+//
 
         // Configure Google Sign In
          gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -71,12 +72,16 @@ class MainActivity : AppCompatActivity() {
         newUserRegister.setOnClickListener {
             val startIntent = Intent(this, RegisterActivity::class.java)
             startActivity(startIntent)
-            finish()
         }
 
         mAuth = FirebaseAuth.getInstance()
         ref = FirebaseDatabase.getInstance().getReference("Users")
         mProgressDialog= ProgressDialog(this)
+        val currentUser=mAuth.currentUser
+        if(currentUser!=null){
+            startActivity(Intent(this,UserInfo::class.java))
+            finish()
+        }
         userLogin.setOnClickListener{
             val  email=useremail.text.toString().trim()
             val pass=password.text.toString().trim()

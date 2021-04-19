@@ -20,11 +20,11 @@ class GoogleDashboard :AppCompatActivity() {
 
         googelname.text = "Name: "+currentUser?.displayName
         googlemail.text="Email: "+currentUser?.email
-        if (currentUser==null){
-            val googleintent = Intent(this,MainActivity::class.java)
-            startActivity(googleintent)
-            finish()
-        }
+//        if (currentUser==null){
+//            val googleintent = Intent(this,MainActivity::class.java)
+//            startActivity(googleintent)
+//            finish()
+//        }
         Glide.with(this).load(currentUser?.photoUrl).into(profile_image)
         googlebtn_signout.setOnClickListener {
             mAuth.signOut()

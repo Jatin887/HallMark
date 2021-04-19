@@ -19,6 +19,7 @@ class Verify:AppCompatActivity() {
         val storedVerificationId=intent.getStringExtra("storedVerificationId")
         val verify = findViewById<Button>(R.id.verifyBtn)
         var otptext=findViewById<EditText>(R.id.Otp)
+        auth = FirebaseAuth.getInstance()
         verify.setOnClickListener{
             var otp=otptext.text.toString().trim()
             if(!otp.isEmpty()){

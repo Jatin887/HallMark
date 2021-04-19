@@ -25,7 +25,13 @@ class SplashScreen:AppCompatActivity() {
         val homeIntent=Intent(this,MainActivity::class.java)
 
          Handler().postDelayed({
-             startActivity(homeIntent)
+             if (user!=null){
+                 startActivity(Intent(this,GoogleDashboard::class.java))
+                 finish()
+             }
+             else{
+                 startActivity(homeIntent)
+             }
         }, timeout.toLong())
 
     }

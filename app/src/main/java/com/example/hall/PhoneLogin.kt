@@ -3,6 +3,7 @@ package com.example.hall
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
-import kotlinx.android.synthetic.main.phone.*
 import java.util.concurrent.TimeUnit
 
 class PhoneLogin:AppCompatActivity() {
@@ -19,6 +19,7 @@ class PhoneLogin:AppCompatActivity() {
     lateinit var storedVerificationId:String
     lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
+    lateinit var login:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.phone)
@@ -28,7 +29,8 @@ class PhoneLogin:AppCompatActivity() {
             startActivity(Intent(this, PhoneUser::class.java))
             finish()
         }
-        phonelogin.setOnClickListener{
+        login=findViewById(R.id.phonelogin)
+        login.setOnClickListener{
             login()
         }
         // Callback function for Phone Auth

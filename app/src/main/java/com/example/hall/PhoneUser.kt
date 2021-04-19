@@ -19,10 +19,10 @@ class PhoneUser:AppCompatActivity() {
         PhoneNo.text = "User Phone No: "+currentUser?.phoneNumber
         var phoneSignOut=findViewById<Button>(R.id.btn_signoutphone)
 
-        if(currentUser==null){
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
-        }
+//        if(currentUser==null){
+//            startActivity(Intent(this,MainActivity::class.java))
+//            finish()
+//        }
 
         phoneSignOut.setOnClickListener{
             auth.signOut()
