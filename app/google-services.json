@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562397103487",
+    "project_id": "hallmark-8c31b",
+    "storage_bucket": "hallmark-8c31b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562397103487:android:adda40b185417c5e10064a",
+        "android_client_info": {
+          "package_name": "com.example.hall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562397103487-oc23vf6flp0p3njp98qgfnq89i5dv3t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrjIolI6U-T1QBaGQFHLafiE5uAbmwszA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562397103487-oc23vf6flp0p3njp98qgfnq89i5dv3t8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
